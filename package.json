@@ -1,0 +1,16 @@
+{
+    "name": "near-buy",
+    "private": true,
+    "workspaces": [
+        "backend",
+        "frontend"
+    ],
+    "scripts": {
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "dev:backend": "npm run start:dev --workspace=backend",
+        "dev:frontend": "npm run dev --workspace=frontend"
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}
